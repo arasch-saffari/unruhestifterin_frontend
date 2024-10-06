@@ -1,6 +1,5 @@
 "use client";
 
-import { colors } from "@/lib/colors";
 import Link from "next/link";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
@@ -23,11 +22,11 @@ export function FooterComponent() {
           >
             <Link
               href="/"
-              className={`text-[${colors.pink[600]}] dark:text-[${colors.pink[600]}] font-bold tracking-wider font-dosis uppercase`}
+              className="text-pink-600 dark:text-pink-600 font-bold tracking-wider font-dosis uppercase"
             >
               Unruhestifter*in
             </Link>
-            <div className="mt-2 text-sm text-[${colors.gray[600]}] dark:text-[${colors.gray[600]}] font-open-sans">
+            <div className="mt-2 text-sm text-gray-600 dark:text-gray-400 font-open-sans">
               Empowering social movements
             </div>
           </motion.div>
@@ -54,8 +53,8 @@ export function FooterComponent() {
             />
           </div>
         </div>
-        <div className="border-t border-[${colors.gray[200]}] dark:border-[${colors.gray[800]}] pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-sm text-[${colors.gray[600]}] dark:text-[${colors.gray[600]}] mb-4 md:mb-0 font-open-sans">
+        <div className="border-t border-gray-200 dark:border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-sm text-gray-600 dark:text-gray-400 mb-4 md:mb-0 font-open-sans">
             © {new Date().getFullYear()} Unruhestifter*in. All rights reserved.
           </div>
           <nav className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8 text-sm font-open-sans">
@@ -68,6 +67,9 @@ export function FooterComponent() {
     </motion.footer>
   );
 }
+
+// Adding default export to support both import styles
+export default FooterComponent;
 
 function SocialIcon({
   href,
@@ -109,7 +111,7 @@ function AnimatedLink({
     >
       <Link
         href={href}
-        className={`text-[${colors.gray[600]}] dark:text-[${colors.gray[600]}] hover:text-[${colors.pink[600]}] dark:hover:text-[${colors.pink[600]}] transition-colors duration-300`}
+        className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-600 transition-colors duration-300"
       >
         {children}
       </Link>
