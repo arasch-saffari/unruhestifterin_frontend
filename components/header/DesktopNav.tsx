@@ -7,13 +7,6 @@ interface Category {
   color: string;
 }
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Über uns", href: "/about" },
-  { name: "Kontakt", href: "/contact" },
-  { name: "Proteste", href: "/protests" }, // Neuer Eintrag
-];
-
 export function DesktopNav() {
   return (
     <nav className="hidden md:flex justify-center flex-grow">

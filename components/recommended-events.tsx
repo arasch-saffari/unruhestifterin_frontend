@@ -13,7 +13,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { animations } from "@/lib/animations";
 
 const recommendedEvents = [
   {
@@ -95,6 +94,8 @@ export function RecommendedEventsComponent() {
           {recommendedEvents.map((event) => (
             <motion.div
               key={event.id}
+              onMouseEnter={() => setHoveredEvent(event.id)}
+              onMouseLeave={() => setHoveredEvent(null)}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}

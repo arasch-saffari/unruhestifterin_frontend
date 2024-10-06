@@ -25,13 +25,6 @@ export function MobileNav({
   theme,
   setTheme,
 }: MobileNavProps) {
-  const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Über uns", href: "/about" },
-    { name: "Kontakt", href: "/contact" },
-    { name: "Proteste", href: "/protests" }, // Neuer Eintrag
-  ];
-
   return (
     <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
       <SheetContent

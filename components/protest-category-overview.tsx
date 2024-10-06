@@ -17,7 +17,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import {
   List,
   LayoutGrid,
@@ -28,7 +27,6 @@ import {
   Bookmark,
   ChevronLeft,
   ChevronRight,
-  ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
